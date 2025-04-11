@@ -2,6 +2,16 @@ import "@virtualstate/navigation/polyfill"
 import Registry from "@dashkite/registry"
 import * as It from "@dashkite/joy/iterable"
 
+# TODO provide more complete interface for navigation lifecycle
+#      ex: scrollrestoration / focus management / success and failure
+#      https://developer.chrome.com/docs/web-platform/navigation-api/#scroll_handling
+#      https://developer.chrome.com/docs/web-platform/navigation-api/#focus_handling
+
+# TODO possibly improve error handling (ex: not found)
+#      https://developer.chrome.com/docs/web-platform/navigation-api/#success_and_failure_events
+
+# TODO add authorization check?
+
 Navigate =
 
   navigable: ( event ) ->
@@ -17,21 +27,28 @@ Router =
 
     application = await Registry.get "application"
   
-    go = ( url ) ->
+    go = ({ url, changed }) ->
       if ( page = application.query url )?
-        handler page
+        handler { url, changed, page... }
       else
         console.warn "cordoba: 
           unable to find page for
           [ #{ url } ]"
 
-    go window.location
+    # initial nav by def has changed
+    go url: window.location, changed: true
 
     do ->
-      for await event from It.events "navigate", navigation
+      ready = undefined
+      navigation.addEventListener "navigate", ( event ) ->
         if Navigate.navigable event
-          event.intercept 
-            handler: -> go event.destination.url
-      return
+          url = new URL event.destination.url
+          changed = url.href != window.location.href
+          event.intercept handler: -> go { url, changed }
+
+    # do ->
+    #   for await event from It.events "navigateerror", navigation
+    #     console.log error: event
+    #     navigation.navigate "/connect"
 
 export default Router
