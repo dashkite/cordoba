@@ -33,7 +33,7 @@ Router =
       else
         console.warn "cordoba: 
           unable to find page for
-          [ #{ url } ]"
+          [ #{ url.pathname + url.search } ]"
 
     # initial nav by def has changed
     go url: window.location, changed: true
