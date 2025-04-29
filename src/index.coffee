@@ -2,15 +2,8 @@ import "@virtualstate/navigation/polyfill"
 import Registry from "@dashkite/registry"
 import * as It from "@dashkite/joy/iterable"
 
-# TODO provide more complete interface for navigation lifecycle
-#      ex: scrollrestoration / focus management / success and failure
-#      https://developer.chrome.com/docs/web-platform/navigation-api/#scroll_handling
-#      https://developer.chrome.com/docs/web-platform/navigation-api/#focus_handling
 
-# TODO possibly improve error handling (ex: not found)
-#      https://developer.chrome.com/docs/web-platform/navigation-api/#success_and_failure_events
 
-# TODO add authorization check?
 
 Navigate =
 
