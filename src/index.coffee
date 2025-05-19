@@ -2,9 +2,6 @@ import "@virtualstate/navigation/polyfill"
 import Registry from "@dashkite/registry"
 import * as It from "@dashkite/joy/iterable"
 
-
-
-
 Navigate =
 
   navigable: ( event ) ->
