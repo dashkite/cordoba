@@ -1,6 +1,6 @@
 {
   "name": "@dashkite/cordoba",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Reactor-based application router based on the Navigation API",
   "keywords": [],
   "homepage": "https://github.com/dashkite/cordoba#readme",
