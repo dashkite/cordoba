@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@dashkite/joy": "link:../joy",
-    "@dashkite/registry": "link:../registry",
+    "@dashkite/registry": "0.7.0",
     "@virtualstate/navigation": "1.0.1-alpha.209"
   }
 }
