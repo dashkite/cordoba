@@ -33,19 +33,19 @@
     "release": "genie release"
   },
   "devDependencies": {
-    "@dashkite/amen": "^0.5.0",
-    "@dashkite/amen-console": "^0.4.0",
-    "@dashkite/assert": "^0.3.0",
-    "@dashkite/genie": "^0.20.14",
-    "@dashkite/genie-clean": "^0.9.0",
-    "@dashkite/genie-coffee": "^0.9.0",
+    "@dashkite/amen": "0.5.0",
+    "@dashkite/amen-console": "0.4.0",
+    "@dashkite/assert": "0.3.0",
+    "@dashkite/genie": "0.20.14",
+    "@dashkite/genie-clean": "0.9.0",
+    "@dashkite/genie-coffee": "0.9.0",
     "@dashkite/genie-module": "link:../genie-module",
-    "@dashkite/genie-release": "^0.5.0"
+    "@dashkite/genie-release": "0.5.0"
   },
   "dependencies": {
-    "@dashkite/joy": "^0.7.0",
+    "@dashkite/joy": "0.7.0",
     "@dashkite/reactive": "link:../reactive",
-    "@dashkite/registry": "^0.11.0",
+    "@dashkite/registry": "0.11.0",
     "@dashkite/river": "link:../river",
     "@virtualstate/navigation": "1.0.1-alpha.209"
   }
