@@ -46,7 +46,7 @@
     "@dashkite/joy": "0.12.40",
     "@dashkite/reactive": "^0.7.35",
     "@dashkite/registry": "0.11.0",
-    "@dashkite/river": "link:../river",
+    "@dashkite/river": "^0.0.11",
     "@virtualstate/navigation": "1.0.1-alpha.209"
   }
 }
